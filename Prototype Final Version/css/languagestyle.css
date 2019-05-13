@@ -1,0 +1,50 @@
+
+html, body {
+  background: #ffffff;
+  height: 100%;
+  width:100%;
+  margin: 0;
+}
+[role=main] {
+  position: absolute;
+/*  top: 0%;
+  left: 0;*/
+  width: 100%;
+  padding-top: 30px;
+/*  padding: 20px 20px 40px;*/
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+img { 
+    width: 100%; 
+}
+
+h1, p, button, ul {
+	color:#000000;
+}
+
+a {
+	color:#65a5d1;
+}
+.header__title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+/*.centered p{
+	display: inline-block;
+}*/

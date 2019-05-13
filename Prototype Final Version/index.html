@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en-IE">
+	<meta charset="utf-8">	
+	<title>prototype4</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet" media="all">
+	<link href="css/materialize.min.css" rel="stylesheet" media="all">
+	<link rel='stylesheet' href='https://rawgit.com/daneden/animate.css/master/animate.min.css'>
+<!--     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css'> -->
+<!--     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/overhang.min.css" />
+
+
+
+</head>
+<body>
+	<main role="main">
+		<header class="header">
+		    <!-- <h1 class="header__title">Written on A Rainy Night to A Friend in The North</h1> -->
+            <!-- <img src="img/title.png" alt="title"> -->
+		    <!-- <p>Hit record and speak each line of the poem to experience.</p> -->
+		  </header>
+		 
+
+
+
+		<!-- play the animation -->
+		<video id="v" controls preload="metadata" poster="img/englishcover.png">
+			<source src="video/0415EN.mp4" type="video/mp4">
+		</video>
+
+        <!-- buttons -->
+        <ul>
+        	<li>
+        		<a class="tooltipped languageicon-btn btn-floating btn-large waves-effect waves-light" style="background-color: #F9F6EE" href="indexcn.html" target="_self" data-tooltip="Switch to Chinese version" data-position="right"><i class="material-icons chineseblue" >language</i></a>
+        	</li>
+
+        	<li>
+        		<a class="tooltipped homeicon-btn btn-floating btn-large waves-effect waves-light" style="background-color: #F9F6EE" href="index.html" target="_self" data-tooltip="Restart" data-position="right"><i class="material-icons chineseblue" >home</i></a>
+        	</li>
+        	<li>
+        		<a data-start class="tooltipped record-btn record-btn-color1 btn-floating btn-large waves-effect waves-light" style="background-color: #F9F6EE" data-tooltip="If active, icon turns red" data-position="right" id="clickme"><i id="speechicon" class="material-icons" >mic</i></a>
+        	</li>
+        </ul>
+		
+		<div data-speech class="speech"><p class="speech__inner">Speak now...</p></div>
+		<!-- <div class="rec-status">Recogniser status:<span id="recStatus">not recognising</span></div> -->
+<!-- 		<button id="startRecBtn">Start Recognition</button>
+		<button id="stopRecBtn">Stop Recognition</button> -->
+	
+
+	</main>
+
+
+<!-- autoplay bgm -->
+	<iframe src="sound/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+	<audio id="player" autoplay loop>
+    <source src="sound/bgm.mp3" type="audio/mp3">
+	</audio>
+
+<!-- play poetry recitation of each line -->
+	<audio id="1sectionsound" controls preload="metadata" style="display:none">
+		<source src="sound/1pr.mp3" type="audio/mp3">
+	</audio>
+	<audio id="2sectionsound" controls preload="metadata" style="display:none">
+		<source src="sound/2pr.mp3" type="audio/mp3">
+	</audio>
+	<audio id="3sectionsound" controls preload="metadata" style="display:none">
+		<source src="sound/3pr.mp3" type="audio/mp3">
+	</audio>
+	<audio id="4sectionsound" controls preload="metadata" style="display:none">
+		<source src="sound/4pr.mp3" type="audio/mp3">
+	</audio>
+
+<!-- play reminder -->
+<!-- 	<audio id="reminder" controls preload="metadata" style="display:none">
+		<source src="sound/reminderEN.mp3" type="audio/mp3">
+	</audio> -->
+
+
+
+	<script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+<!-- 	<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js'></script> -->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="js/video-speech-en.js" defer></script>
+	<script src="js/idle.js" defer></script>
+
+
+<!-- 	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jqueryui/1.12.0/jquery-ui.js"></script> -->
+
+<!--     <script type="text/javascript" src="js/overhang.min.js"></script> -->
+
+	<script>
+	  $(document).ready(function(){
+	    $('.tooltipped').tooltip();
+	  });
+	</script>
+
+
+
+
+</body>
+</html>
